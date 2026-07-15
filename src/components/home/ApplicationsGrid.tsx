@@ -28,7 +28,7 @@ export default function ApplicationsGrid() {
 
         {/* Applications 3x4 Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {applications.map((app, idx) => (
+          {applications.slice(0, 12).map((app, idx) => (
             <AnimatedSection
               key={app.slug}
               delay={0.05 * (idx % 4)}

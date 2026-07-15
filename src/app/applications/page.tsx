@@ -37,13 +37,13 @@ export default function ApplicationsHubPage() {
             </p>
           </div>
 
-          {/* Grid of all 12 applications */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          {/* Flex wrap container to center trailing items */}
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
             {applications.map((app, idx) => (
               <AnimatedSection
                 key={app.slug}
                 delay={0.05 * (idx % 4)}
-                className="group bg-white rounded-lg border border-border-custom hover:border-accent hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden"
+                className="group bg-white rounded-lg border border-border-custom hover:border-accent hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:w-[calc(25%-18px)]"
               >
                 <div>
                   {/* Image cover */}

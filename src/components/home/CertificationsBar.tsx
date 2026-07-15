@@ -24,7 +24,7 @@ export default function CertificationsBar() {
         </div>
 
         {/* Logos Grid */}
-        <AnimatedSection delay={0.1} className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-6 items-center justify-items-center">
+        <AnimatedSection delay={0.1} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center max-w-5xl mx-auto">
           {companyDetails.certifications.map((cert) => (
             <div 
               key={cert.id}
