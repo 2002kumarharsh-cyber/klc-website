@@ -94,7 +94,7 @@ export default function ContactPage() {
                       Corporate Correspondence
                     </h3>
                     <p className="text-text-secondary text-xs leading-relaxed mt-1">
-                      Enquiries: <a href="mailto:karanwallimechem@gmail.com" className="text-primary font-semibold hover:underline">{companyDetails.email}</a>
+                      Enquiries: <a href={`mailto:${companyDetails.email}`} className="text-primary font-semibold hover:underline">{companyDetails.email}</a>
                     </p>
                     <p className="text-[10px] text-text-secondary/80 mt-0.5">
                       Standard response time is within 24 business hours.

@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Download } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { companyDetails } from "@/data/company";
+import DownloadGate from "@/components/ui/DownloadGate";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -37,15 +38,10 @@ export default function Footer() {
               Established in 1999, KLC is a premier manufacturer of high-quality Precipitated and Ground Calcium Carbonate, serving major industries worldwide with precision and reliability.
             </p>
             <div className="pt-2">
-              <Link 
-                href="/public/brochure.pdf" 
-                target="_blank" 
-                download
-                className="inline-flex items-center gap-2 bg-accent hover:bg-amber-600 text-primary-dark font-bold text-xs px-4 py-2.5 rounded transition-all"
-              >
-                <Download size={14} />
-                Download Brochure
-              </Link>
+              <DownloadGate 
+                buttonText="Download Brochure" 
+                className="inline-flex items-center gap-2 bg-accent hover:bg-amber-600 text-primary-dark font-bold text-xs px-4 py-2.5 rounded transition-all cursor-pointer"
+              />
             </div>
           </div>
 
@@ -132,7 +128,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail size={14} className="text-accent flex-shrink-0" />
-                <a href="mailto:karanwallimechem@gmail.com" className="hover:text-accent transition-colors">
+                <a href={`mailto:${companyDetails.email}`} className="hover:text-accent transition-colors">
                   {companyDetails.email}
                 </a>
               </li>

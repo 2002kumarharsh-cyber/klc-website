@@ -16,7 +16,7 @@ export const companyDetails = {
   directorsNote: 
     "At Karanwal Lime Chem, we believe that innovation and quality are the cornerstones of long-term success. Over the past two decades, our journey has been driven by a relentless pursuit of excellence, a commitment to sustainability, and an unwavering dedication to our customers. We take immense pride in the strong, lasting relationships we have built with our customers, founded on trust, and mutual respect. Our products have made a significant impact across various industries, and it is our commitment to these relationships that fuels our continuous drive for progress and innovation.\n\nAs we look to the future, we remain focused on strengthening these bonds, fostering new collaborations, and continuing to make a meaningful difference in the world. Thank you for being an integral part of our journey. Together, we can achieve even greater heights.",
   address: "7 Km Dattyana Road, Chandpur, District-Bijnor-246725, Uttar Pradesh, India",
-  email: "karanwallimechem@gmail.com",
+  email: "2002kumarharsh@gmail.com",
   phone: "+91 85338 87901",
   whatsapp: "+918533887901",
   googleMapsLink: "https://maps.google.com/?q=7+Km+Dattyana+Road,+Chandpur,+District-Bijnor-246725,+Uttar+Pradesh",

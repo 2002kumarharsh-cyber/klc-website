@@ -6,6 +6,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { companyDetails } from "@/data/company";
 import { applications } from "@/data/applications";
 
 export default function Header() {
@@ -50,14 +51,14 @@ export default function Header() {
           </span>
         </div>
         <div className="flex items-center gap-4 ml-auto">
-          <a href="tel:+918533887901" className="flex items-center gap-1 hover:text-accent transition-colors font-medium">
+          <a href={`tel:${companyDetails.phone}`} className="flex items-center gap-1 hover:text-accent transition-colors font-medium">
             <Phone size={12} className="text-accent" />
-            +91 85338 87901
+            {companyDetails.phone}
           </a>
           <span className="text-white/30">|</span>
-          <a href="mailto:karanwallimechem@gmail.com" className="flex items-center gap-1 hover:text-accent transition-colors font-medium">
+          <a href={`mailto:${companyDetails.email}`} className="flex items-center gap-1 hover:text-accent transition-colors font-medium">
             <Mail size={12} className="text-accent" />
-            karanwallimechem@gmail.com
+            {companyDetails.email}
           </a>
         </div>
       </div>
