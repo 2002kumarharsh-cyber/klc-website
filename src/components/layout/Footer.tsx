@@ -142,20 +142,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* ISO Certifications Horizontal Strip */}
-      <div className="bg-primary-dark border-t border-white/5 py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-[10px] text-white/60 uppercase tracking-widest font-semibold flex flex-wrap justify-center items-center gap-x-6 gap-y-2">
-          <span>ISO 9001:2015 Registered</span>
-          <span className="hidden sm:inline text-white/20">•</span>
-          <span>ISO 14001:2015 Registered</span>
-          <span className="hidden sm:inline text-white/20">•</span>
-          <span>OHSAS 45001 Registered</span>
-          <span className="hidden sm:inline text-white/20">•</span>
-          <span>FSSC 22000 Standards Compliant</span>
-          <span className="hidden sm:inline text-white/20">•</span>
-          <span>WHO-GMP Certified Quality</span>
-        </div>
-      </div>
+
 
       {/* Bottom Copyright Bar */}
       <div className="bg-[#0b1b2a] py-6 border-t border-white/5">

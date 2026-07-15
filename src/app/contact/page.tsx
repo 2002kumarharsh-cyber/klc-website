@@ -126,12 +126,13 @@ export default function ContactPage() {
       {/* Map Embed Section */}
       <section className="h-96 w-full border-t border-border-custom relative bg-gray-100">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13961.50346399625!2d78.13280145!3d29.123512249999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390bc576f3f019bb%3A0xe5f87b8d0c2e6462!2sChandpur%2C%20Uttar%20Pradesh%20246725!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42061.11204687109!2d78.23037705978663!3d29.14945669887812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390b9791d3483873%3A0x9ba093f2819ada18!2sKaranwal%20Lime%20Chem%20I%20Pvt.%20Ltd.!5e1!3m2!1sen!2sin!4v1784115042997!5m2!1sen!2sin"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
+          referrerPolicy="strict-origin-when-cross-origin"
           title="KLC Location Map"
           className="filter grayscale opacity-80 hover:opacity-100 transition-opacity"
         />

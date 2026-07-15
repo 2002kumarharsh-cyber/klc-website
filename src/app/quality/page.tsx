@@ -1,8 +1,8 @@
 import React from "react";
-import Image from "next/image";
-import { ShieldCheck, Award, Eye, ClipboardCheck } from "lucide-react";
+import { ClipboardCheck } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import CertificationsList from "@/components/quality/CertificationsList";
 import { companyDetails } from "@/data/company";
 
 export const metadata = {
@@ -70,56 +70,8 @@ export default function QualityPage() {
             </p>
           </div>
 
-          {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {companyDetails.certifications.map((cert, idx) => (
-              <AnimatedSection
-                key={cert.id}
-                delay={0.05 * (idx % 4)}
-                className="bg-surface-2 border border-border-custom/50 rounded-lg p-6 flex flex-col justify-between hover:border-accent transition-all duration-300 shadow-sm"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between border-b border-border-custom/30 pb-3">
-                    <span className="font-mono text-xs font-bold text-accent">
-                      CERTIFICATE
-                    </span>
-                    <span className="bg-primary/10 text-primary font-display font-bold text-[10px] px-2 py-0.5 rounded">
-                      ACTIVE
-                    </span>
-                  </div>
-
-                  <div className="flex items-center gap-4">
-                    <div className="relative w-12 h-12 flex-shrink-0 bg-white p-1.5 rounded border border-border-custom/30">
-                      <Image
-                        src={cert.logo}
-                        alt={cert.name}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-bold text-sm text-primary">
-                        {cert.name}
-                      </h3>
-                      <div className="text-[10px] text-text-secondary font-medium">
-                        {cert.fullName}
-                      </div>
-                    </div>
-                  </div>
-
-                  <p className="text-text-secondary text-[11px] leading-relaxed pt-2">
-                    {cert.description}
-                  </p>
-                </div>
-
-                <div className="pt-4 mt-6 border-t border-border-custom/20 text-[10px] text-accent font-semibold flex items-center gap-1">
-                  <ShieldCheck size={12} className="stroke-[2.5px]" />
-                  <span>Valid & Audited</span>
-                </div>
-
-              </AnimatedSection>
-            ))}
-          </div>
+          {/* Cards (Client Component) */}
+          <CertificationsList certifications={companyDetails.certifications} />
 
         </div>
       </section>

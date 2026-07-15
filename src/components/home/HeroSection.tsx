@@ -12,7 +12,7 @@ export default function HeroSection() {
       {/* Background Image with Deep Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/manufacturing/manufacturing-facility-aerial-view-01.jpg"
+          src="/images/manufacturing/manufacturing-plant-wide-view-01.jpg"
           alt="KLC Manufacturing Facility"
           fill
           className="object-cover object-center opacity-30 select-none pointer-events-none"

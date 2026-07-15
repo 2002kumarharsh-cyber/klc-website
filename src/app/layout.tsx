@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://karanwallimechem.com",
     siteName: "Karanwal Lime Chem"
+  },
+  icons: {
+    icon: "/images/brand/klc-logo.svg",
   }
 };
 

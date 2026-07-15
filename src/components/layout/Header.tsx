@@ -75,7 +75,7 @@ export default function Header() {
           <div className="flex justify-between items-center h-12">
             
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <a href="/" className="flex items-center gap-3 group">
               <div className="relative w-12 h-12 flex-shrink-0">
                 <Image
                   src="/images/brand/klc-logo.svg"
@@ -93,22 +93,38 @@ export default function Header() {
                   Excellence in Calcium Carbonate
                 </span>
               </div>
-            </Link>
+            </a>
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center gap-8">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={cn(
-                    "font-medium text-sm transition-colors hover:text-accent",
-                    pathname === link.href ? "text-primary font-semibold border-b-2 border-accent pb-1 -mb-1.5" : "text-text-secondary"
-                  )}
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {navLinks.map((link) => {
+                if (link.href === "/") {
+                  return (
+                    <a
+                      key={link.name}
+                      href={link.href}
+                      className={cn(
+                        "font-medium text-sm transition-colors hover:text-accent",
+                        pathname === link.href ? "text-primary font-semibold border-b-2 border-accent pb-1 -mb-1.5" : "text-text-secondary"
+                      )}
+                    >
+                      {link.name}
+                    </a>
+                  );
+                }
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={cn(
+                      "font-medium text-sm transition-colors hover:text-accent",
+                      pathname === link.href ? "text-primary font-semibold border-b-2 border-accent pb-1 -mb-1.5" : "text-text-secondary"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
 
               {/* Products Dropdown */}
               <div 
@@ -242,7 +258,7 @@ export default function Header() {
           )}
         >
           <div className="px-4 pt-2 pb-6 space-y-3">
-            <Link
+            <a
               href="/"
               className={cn(
                 "block py-2 px-3 rounded-md font-semibold text-sm",
@@ -250,7 +266,7 @@ export default function Header() {
               )}
             >
               Home
-            </Link>
+            </a>
             
             <Link
               href="/about"

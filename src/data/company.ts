@@ -27,49 +27,48 @@ export const companyDetails = {
       name: "ISO 9001:2015",
       logo: "/images/brand/iso9001-logo.png",
       fullName: "ISO 9001 Quality Management System",
-      description: "Ensures products meet client requirements with consistent quality."
+      description: "Ensures products meet client requirements with consistent quality.",
+      pdf: "/certificates/karanwal limechem pvt ltd iso 14001.pdf"
     },
     {
       id: "iso14001",
       name: "ISO 14001:2015",
       logo: "/images/brand/iso14001-logo.png",
       fullName: "ISO 14001 Environmental Management System",
-      description: "Commits to eco-friendly production and environmental standards."
+      description: "Commits to eco-friendly production and environmental standards.",
+      pdf: "/certificates/karanwal limechem pvt ltd iso 14001.pdf"
     },
     {
       id: "iso45001",
       name: "OHSAS 45001 / ISO 45001:2018",
       logo: "/images/brand/iso45001-logo.png",
       fullName: "ISO 45001 Occupational Health & Safety",
-      description: "Secures a safe, healthy workplace and prevents work-related injury."
+      description: "Secures a safe, healthy workplace and prevents work-related injury.",
+      pdf: "/certificates/karanwal limechem pvt ltd ohsas 45001.pdf"
     },
     {
       id: "fssc22000",
       name: "FSSC 22000",
       logo: "/images/brand/fssc22000-logo.png",
       fullName: "Food Safety System Certification 22000",
-      description: "Certified standards for food-grade Calcium Carbonate processing."
+      description: "Certified standards for food-grade Calcium Carbonate processing.",
+      pdf: "/certificates/karanwal limechem pvt ltd fssc 22000.pdf"
     },
     {
       id: "gmp",
       name: "WHO-GMP",
       logo: "/images/brand/gmp-logo.png",
       fullName: "WHO Good Manufacturing Practices",
-      description: "Ensures products are consistently controlled to quality standards."
+      description: "Ensures products are consistently controlled to quality standards.",
+      pdf: "/certificates/karanwal limechem pvt ltd who-gmp.pdf"
     },
     {
       id: "fssai",
       name: "FSSAI",
       logo: "/images/brand/fssai-logo.png",
       fullName: "Food Safety and Standards Authority of India",
-      description: "Registered and compliant with Indian food safety guidelines."
-    },
-    {
-      id: "iec",
-      name: "IEC Code",
-      logo: "/images/brand/iec-logo.png",
-      fullName: "Import Export Code",
-      description: "Enables global distribution and export of KLC products."
+      description: "Registered and compliant with Indian food safety guidelines.",
+      pdf: "/certificates/karanwal limechem pvt ltd fssai.pdf"
     }
   ],
   whyChooseUs: [
