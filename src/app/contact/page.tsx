@@ -134,7 +134,7 @@ export default function ContactPage() {
           loading="lazy"
           referrerPolicy="strict-origin-when-cross-origin"
           title="KLC Location Map"
-          className="filter grayscale opacity-80 hover:opacity-100 transition-opacity"
+          className="w-full h-full"
         />
       </section>
     </>

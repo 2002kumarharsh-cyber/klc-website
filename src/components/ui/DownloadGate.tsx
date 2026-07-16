@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { Download, X, Mail, ShieldCheck } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+import { companyDetails } from "@/data/company";
+
 interface DownloadGateProps {
   buttonText?: string;
   className?: string;
@@ -28,11 +30,7 @@ export default function DownloadGate({
   }, []);
 
   const handleTriggerDownload = () => {
-    if (alreadyVerified) {
-      triggerBrowserDownload();
-    } else {
-      setIsOpen(true);
-    }
+    triggerBrowserDownload();
   };
 
   const triggerBrowserDownload = () => {
@@ -54,7 +52,11 @@ export default function DownloadGate({
 
     try {
       // Submit to Formspree
-      const response = await fetch("https://formspree.io/f/xzbkbknd", {
+      const formspreeUrl = companyDetails.formspreeId.startsWith("http")
+        ? companyDetails.formspreeId
+        : `https://formspree.io/f/${companyDetails.formspreeId}`;
+
+      const response = await fetch(formspreeUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

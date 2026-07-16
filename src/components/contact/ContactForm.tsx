@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { companyDetails } from "@/data/company";
 
 export default function ContactForm() {
   const [form, setForm] = useState({
@@ -29,7 +30,11 @@ export default function ContactForm() {
     setError("");
 
     try {
-      const response = await fetch("https://formspree.io/f/xzbkbknd", {
+      const formspreeUrl = companyDetails.formspreeId.startsWith("http")
+        ? companyDetails.formspreeId
+        : `https://formspree.io/f/${companyDetails.formspreeId}`;
+
+      const response = await fetch(formspreeUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
