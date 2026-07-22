@@ -2,7 +2,6 @@ import React from "react";
 import PageHero from "@/components/ui/PageHero";
 import SpecTable from "@/components/products/SpecTable";
 import ChemicalAnalysis from "@/components/products/ChemicalAnalysis";
-import DownloadGate from "@/components/ui/DownloadGate";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { pccGrades } from "@/data/products";
 import { pccChemicalAnalysis } from "@/data/chemicalAnalysis";
@@ -61,7 +60,7 @@ export default function PCCPage() {
                 </li>
                 <li className="flex gap-2 items-start">
                   <CheckCircle2 size={14} className="text-accent flex-shrink-0 mt-0.5" />
-                  <span><strong>98% Calcium Carbonate assay</strong> – Guarantees low impurity footprint in critical batches.</span>
+                  <span><strong>Minimum 98% Calcium Carbonate assay</strong> – Guarantees low impurity footprint in critical batches.</span>
                 </li>
                 <li className="flex gap-2 items-start">
                   <CheckCircle2 size={14} className="text-accent flex-shrink-0 mt-0.5" />
@@ -112,15 +111,17 @@ export default function PCCPage() {
                   Need Sizing Charts, MSDS Sheets, or Custom Specifications?
                 </h3>
                 <p className="text-white/80 text-xs sm:text-sm max-w-2xl leading-relaxed">
-                  Download the complete technical catalogue containing detailed grading curves, dispersibility curves, and packaging parameters, or contact our laboratories for custom compounding.
+                  Request the complete technical catalogue containing detailed grading curves, dispersibility curves, and packaging parameters, or contact our laboratories for custom compounding.
                 </p>
               </div>
 
               <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
-                <DownloadGate 
-                  buttonText="Download Specs Catalogue" 
-                  className="w-full text-center py-3 justify-center"
-                />
+                <Link
+                  href="/contact?subject=Technical Specs Request"
+                  className="w-full bg-accent hover:bg-amber-600 text-primary-dark font-bold text-xs py-3 rounded text-center transition-all inline-flex items-center justify-center gap-1.5 shadow-md"
+                >
+                  Request Technical Specs
+                </Link>
                 <Link
                   href="/contact?subject=Technical Specs Request"
                   className="w-full border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold text-xs py-3 rounded text-center transition-all inline-flex items-center justify-center gap-1.5"

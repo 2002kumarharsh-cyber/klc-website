@@ -25,13 +25,17 @@ export const pccChemicalAnalysis: ChemProperty[] = [
 ];
 
 export const gccChemicalAnalysis: ChemProperty[] = [
-  { property: "CaCO₃", value: "94.00 - 98.50%" },
+  { property: "Assay (as CaCO₃)", value: "94.00 - 98.50%" },
   { property: "CaO", value: "53.50 - 55.50%" },
+  { property: "Color", value: "White" },
   { property: "MgCO₃", value: "0.31%" },
-  { property: "MgO", value: "0.20 - 0.40%" },
+  { property: "Magnesia (as MgO)", value: "0.20 - 0.40%" },
   { property: "Acid Insoluble Residue", value: "0.31 - 0.72%" },
   { property: "Silica as SiO₂", value: "0.30%" },
-  { property: "Fe₂O₃", value: "0.50%" },
+  { property: "Chloride (as Cl)", value: "Traces" },
+  { property: "Fe₂O₃", value: "0.50% MAX" },
   { property: "Al₂O₃", value: "0.17%" },
-  { property: "Loss on ignition", value: "43.50%" }
+  { property: "Loss on ignition", value: "42 - 44%" },
+  { property: "Brightness (ISO)", value: "93 ± 1%" },
+  { property: "pH", value: "9.5 ± 0.5" }
 ];

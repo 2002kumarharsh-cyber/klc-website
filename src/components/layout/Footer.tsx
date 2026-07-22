@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { companyDetails } from "@/data/company";
-import DownloadGate from "@/components/ui/DownloadGate";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -38,10 +37,12 @@ export default function Footer() {
               Established in 1999, KLC is a premier manufacturer of high-quality Precipitated and Ground Calcium Carbonate, serving major industries worldwide with precision and reliability.
             </p>
             <div className="pt-2">
-              <DownloadGate 
-                buttonText="Download Brochure" 
+              <Link 
+                href="/contact?subject=Brochure Request" 
                 className="inline-flex items-center gap-2 bg-accent hover:bg-amber-600 text-primary-dark font-bold text-xs px-4 py-2.5 rounded transition-all cursor-pointer"
-              />
+              >
+                Request Brochure
+              </Link>
             </div>
           </div>
 
@@ -143,8 +144,20 @@ export default function Footer() {
       {/* Bottom Copyright Bar */}
       <div className="bg-[#0b1b2a] py-6 border-t border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
-          <div>
-            &copy; {currentYear} {companyDetails.name}. All Rights Reserved.
+          <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 text-center md:text-left">
+            <span>&copy; {currentYear} {companyDetails.name}. All Rights Reserved.</span>
+            <span className="hidden md:inline text-white/10">|</span>
+            <span className="flex items-center justify-center md:justify-start gap-1">
+              Developed by
+              <a 
+                href="https://harshkumar1306.github.io/harshkumar.github.io/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-white hover:text-accent font-semibold transition-colors"
+              >
+                HK
+              </a>
+            </span>
           </div>
           <div className="flex gap-4">
             <Link href="/about" className="hover:text-white transition-colors">About Us</Link>

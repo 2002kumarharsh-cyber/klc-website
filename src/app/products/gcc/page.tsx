@@ -1,10 +1,7 @@
 import React from "react";
 import PageHero from "@/components/ui/PageHero";
-import SpecTable from "@/components/products/SpecTable";
 import ChemicalAnalysis from "@/components/products/ChemicalAnalysis";
-import DownloadGate from "@/components/ui/DownloadGate";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import { gccGrades } from "@/data/products";
 import { gccChemicalAnalysis } from "@/data/chemicalAnalysis";
 import Link from "next/link";
 import { CheckCircle2, Factory, ShieldAlert, Award } from "lucide-react";
@@ -46,6 +43,9 @@ export default function GCCPage() {
               <p className="text-text-secondary text-sm leading-relaxed">
                 GCC behaves as a highly functional filler and extender pigment in plastic compounding, PVC pipes, paint formulations, adhesives, paper coating, and building materials where quality must balance cost efficiency.
               </p>
+              <p className="text-text-secondary text-sm leading-relaxed">
+                Rather than offering fixed catalog items, KLC Ground Calcium Carbonate grades are fully customizable as per customer requirements according to the required micron size (ranging from 2 to 40 microns) to suit exact compounding needs.
+              </p>
             </div>
 
             {/* Sidebar info */}
@@ -71,18 +71,7 @@ export default function GCCPage() {
             </div>
           </div>
 
-          {/* Spec Grid Table */}
-          <div className="space-y-4">
-            <div>
-              <span className="text-accent text-xs font-semibold uppercase tracking-wider block">
-                Product Specifications
-              </span>
-              <h3 className="font-display font-bold text-lg text-primary mt-1">
-                Technical Datasheet: KLC GCC Grades
-              </h3>
-            </div>
-            <SpecTable grades={gccGrades} />
-          </div>
+
 
           {/* Chemical Analysis */}
           <div className="space-y-4">
@@ -112,15 +101,17 @@ export default function GCCPage() {
                   Need Sizing Charts, MSDS Sheets, or Custom Specifications?
                 </h3>
                 <p className="text-white/80 text-xs sm:text-sm max-w-2xl leading-relaxed">
-                  Download the complete technical catalogue containing detailed grading curves, dispersibility curves, and packaging parameters, or contact our laboratories for custom compounding.
+                  Request the complete technical catalogue containing detailed grading curves, dispersibility curves, and packaging parameters, or contact our laboratories for custom compounding.
                 </p>
               </div>
 
               <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3">
-                <DownloadGate 
-                  buttonText="Download Specs Catalogue" 
-                  className="w-full text-center py-3 justify-center"
-                />
+                <Link
+                  href="/contact?subject=Technical Specs Request"
+                  className="w-full bg-accent hover:bg-amber-600 text-primary-dark font-bold text-xs py-3 rounded text-center transition-all inline-flex items-center justify-center gap-1.5 shadow-md"
+                >
+                  Request Technical Specs
+                </Link>
                 <Link
                   href="/contact?subject=Technical Specs Request"
                   className="w-full border border-white/40 hover:border-white hover:bg-white/10 text-white font-semibold text-xs py-3 rounded text-center transition-all inline-flex items-center justify-center gap-1.5"

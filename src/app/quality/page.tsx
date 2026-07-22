@@ -40,7 +40,7 @@ export default function QualityPage() {
     {
       step: "06",
       title: "Retention Samples & Traceability",
-      desc: "Every shipped batch is stamped with a unique batch serial number. We retain physical verification samples and laboratory test records for 24 months to ensure traceability."
+      desc: "Every shipped batch is stamped with a unique batch serial number. We retain physical verification samples and laboratory test records for 12 months to ensure traceability."
     }
   ];
 

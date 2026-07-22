@@ -23,7 +23,7 @@ export default function ProductsHubPage() {
         "Morphology: Aragonite, Semi-Calcite",
         "Primary Particle Size: 0.3 - 1.4 µm",
         "Brightness: Ultra High Brightness",
-        "Assay: 97% - 98% CaCO₃ purity profile"
+        "Assay: 98% to 100% CaCO₃ purity profile"
       ],
       link: "/products/pcc"
     },
@@ -105,14 +105,20 @@ export default function ProductsHubPage() {
                   </div>
 
                   {/* Grades included */}
-                  <div className="flex flex-wrap items-center gap-2 text-xs">
-                    <span className="text-primary font-bold">Standard Grades:</span>
-                    {fam.grades.map((grade) => (
-                      <span key={grade} className="bg-surface-2 px-2.5 py-1 rounded text-text-secondary border border-border-custom/50 font-mono">
-                        {grade}
-                      </span>
-                    ))}
-                  </div>
+                  {fam.id === "gcc" ? (
+                    <div className="text-xs text-text-secondary leading-relaxed">
+                      <span className="text-primary font-bold">Grades:</span> Fully customizable according to customer requirements based on micron size (2 to 40 microns).
+                    </div>
+                  ) : (
+                    <div className="flex flex-wrap items-center gap-2 text-xs">
+                      <span className="text-primary font-bold">Standard Grades:</span>
+                      {fam.grades.map((grade) => (
+                        <span key={grade} className="bg-surface-2 px-2.5 py-1 rounded text-text-secondary border border-border-custom/50 font-mono">
+                          {grade}
+                        </span>
+                      ))}
+                    </div>
+                  )}
 
                   {/* Action Link */}
                   <div className="pt-2">

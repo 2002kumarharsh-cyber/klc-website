@@ -28,8 +28,10 @@ export default async function ApplicationDetailPage({ params }: ApplicationPageP
 
   // Cross-reference recommended grades details
   const recommendedGrades = allProductGrades.filter((grade) =>
-    app.recommendedProducts.includes(grade.id)
+    app.recommendedProducts.includes(grade.id) && grade.type !== "GCC"
   );
+
+  const hasGccRecommendation = app.recommendedProducts.some((id) => id.startsWith("klc-g-"));
 
   return (
     <>
@@ -138,7 +140,25 @@ export default async function ApplicationDetailPage({ params }: ApplicationPageP
                       </div>
                     </Link>
                   ))}
-                  {recommendedGrades.length === 0 && (
+
+                  {hasGccRecommendation && (
+                    <div className="border border-dashed border-border-custom p-4 rounded-lg bg-surface-2/50 space-y-1">
+                      <div className="font-semibold text-xs text-primary uppercase tracking-wider">
+                        Ground Calcium Carbonate (GCC)
+                      </div>
+                      <p className="text-[11px] text-text-secondary leading-relaxed">
+                        GCC grades are fully customizable according to customer requirements based on micron size (2 to 40 microns).
+                      </p>
+                      <Link 
+                        href="/products/gcc"
+                        className="text-[10px] text-accent font-bold hover:underline block pt-1"
+                      >
+                        Learn about GCC customization &rarr;
+                      </Link>
+                    </div>
+                  )}
+                  
+                  {recommendedGrades.length === 0 && !hasGccRecommendation && (
                     <div className="text-xs text-text-secondary italic">
                       Please contact our engineers for standard recommendations.
                     </div>

@@ -24,7 +24,7 @@ export default function ProductsSnapshot() {
     {
       type: "GCC",
       fullName: "Ground Calcium Carbonate",
-      image: "/images/manufacturing/industrial-grinding-mill-01.jpg",
+      image: "/images/manufacturing/manufacturing-facility-aerial-view-01.jpg",
       description: "Manufactured from high-purity natural white calcite crystal, KLC's Ground Calcium Carbonate (GCC) is processed in our state-of-the-art ultrafine grinding mill to deliver optimal particle size distribution and brightness cost-effectively.",
       bulletPoints: [
         "Processed from premium natural calcite deposits",

@@ -15,7 +15,7 @@ export default function AboutPage() {
     {
       num: "01",
       name: "Limestone Calcination",
-      desc: "Limestone is heated at 1000°C in calcination towers to split calcium carbonate into carbon dioxide gas and quicklime."
+      desc: "Limestone is heated at 1600°C in calcination towers to split calcium carbonate into carbon dioxide gas and quicklime."
     },
     {
       num: "02",
@@ -76,17 +76,17 @@ export default function AboutPage() {
               </span>
               <div className="space-y-4 pt-2">
                 <h3 className="font-display font-semibold text-xs text-primary uppercase tracking-wider">
-                  Directors' Message
+                  Director's Message
                 </h3>
                 <p className="text-text-secondary text-xs italic leading-relaxed whitespace-pre-line">
                   {companyDetails.directorsNote}
                 </p>
                 <div className="border-t border-border-custom/50 pt-4 flex flex-col">
                   <span className="font-display font-bold text-xs text-primary">
-                    Mr. Vikas Karanwal & Mr. Antriksh Karanwal
+                    Mr. Vikas Karanwal
                   </span>
                   <span className="text-[10px] text-text-secondary font-medium">
-                    Directors, Karanwal Lime Chem Pvt Ltd
+                    Director, Karanwal Lime Chem Pvt Ltd
                   </span>
                 </div>
               </div>
@@ -156,12 +156,12 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { path: "/images/manufacturing/calcination-tower-02.jpg", title: "Calcination Tower Sizing" },
+              { path: "/images/manufacturing/calcination-tower-02.jpg", title: "Lime Kilns" },
               { path: "/images/manufacturing/finished-product-warehouse-01.jpg", title: "Batch Packaging Line" },
               { path: "/images/manufacturing/processing-equipment-01.jpg", title: "Precipitation Reactors" },
               { path: "/images/manufacturing/electrical-control-panel-01.jpg", title: "Automation Control Panel" },
               { path: "/images/manufacturing/limestone-stockpile-01.jpg", title: "Limestone Feedstock Stockpile" },
-              { path: "/images/manufacturing/production-line-01.jpg", title: "Continuous Refining Mill" }
+              { path: "/images/manufacturing/production-line-01.jpg", title: "Continuous Dryers" }
             ].map((img, idx) => (
               <AnimatedSection
                 key={idx}
